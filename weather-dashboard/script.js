@@ -1,11 +1,12 @@
 let searchInput = document.getElementById("search-input");
 let searchBtn = document.getElementById("search-btn");
-
+let historySection = document.getElementById("history-section");
 let city = "Montreal";
 // get city from the search input
 searchBtn.addEventListener("click", function () {
   console.log(searchInput.value);
   city = searchInput.value;
+  searchHistory(searchInput.value);
   searchInput.value = "";
   getWeatherData(city);
 });
@@ -36,5 +37,21 @@ function getWeatherData(city) {
         });
     });
 }
+
+// search history
+function searchHistory(value) {
+  if (value !== "") {
+    let historyItem = document.createElement("button");
+    historyItem.className = "history-btn";
+    historyItem.textContent = value;
+    historySection.appendChild(historyItem);
+  }
+}
+historySection.addEventListener("click", function (event) {
+  if (event.target.nodeName === "BUTTON") {
+    console.log(event.target.textContent);
+    getWeatherData(event.target.textContent);
+  }
+});
 
 getWeatherData(city);
