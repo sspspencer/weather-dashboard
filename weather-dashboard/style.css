@@ -1,0 +1,11 @@
+#header-title {
+  background-color: rgb(38, 17, 98);
+  display: flex;
+  justify-content: center;
+}
+#header-title h1 {
+  color: white;
+}
+#content-container {
+  display: flex;
+}

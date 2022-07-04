@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-title"><h1>Weather Dashboard</h1></div>
+    </header>
+    <div id="content-container">
+      <aside>
+        <div id="search">
+          <h1>Search for a city:</h1>
+          <input type="text" value="Montreal" />
+          <button>Search</button>
+        </div>
+        <div id="search-history"></div>
+      </aside>
+      <main>
+        <div id="weather-display">
+          <div id="current-weather"></div>
+          <div id="5-day">
+            <h2>5-day Forecast</h2>
+            <div id="card-container">
+              <div class="card" id="1"></div>
+              <div class="card" id="2"></div>
+              <div class="card" id="3"></div>
+              <div class="card" id="4"></div>
+              <div class="card" id="5"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
