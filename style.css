@@ -1,0 +1,24 @@
+#header-title {
+  background-color: rgb(38, 17, 98);
+  display: flex;
+  justify-content: center;
+}
+#header-title h1 {
+  color: white;
+}
+#content-container {
+  display: flex;
+}
+#current-weather {
+  border: 3px solid black;
+}
+#current-description {
+  display: flex;
+}
+#card-container {
+  display: flex;
+}
+.card {
+  border: 3px solid black;
+  margin-right: 2px;
+}

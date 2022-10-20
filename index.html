@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-title"><h1>Weather Dashboard</h1></div>
+    </header>
+    <div id="content-container">
+      <aside>
+        <div id="search">
+          <h1>Search for a city:</h1>
+          <input id="search-input" type="text" placeholder="Montreal" />
+          <button id="search-btn">Search</button>
+        </div>
+        <div id="history-section"></div>
+      </aside>
+      <main>
+        <div id="weather-display">
+          <div id="current-weather">
+            <div id="current-description"></div>
+            <ul id="current-data"></ul>
+          </div>
+          <div id="5-day">
+            <h2>5-day Forecast</h2>
+            <div id="card-container"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </body>
+</html>
