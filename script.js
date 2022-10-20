@@ -7,7 +7,6 @@ let currentData = document.getElementById("current-data");
 let city = "Montreal";
 // get city from the search input
 searchBtn.addEventListener("click", function () {
-  console.log(searchInput.value);
   city = searchInput.value;
   searchHistory(searchInput.value);
   searchInput.value = "";
@@ -39,7 +38,6 @@ function getWeatherData(city) {
           return weatherResponse.json();
         })
         .then(function (weatherData) {
-          console.log(weatherData);
           let weatherImg = document.createElement("img");
           weatherImg.src =
             " http://openweathermap.org/img/wn/" +
@@ -92,8 +90,6 @@ function getWeatherData(city) {
             }
             card.appendChild(cardList);
             cardContainer.appendChild(card);
-            console.log(dailyDateString);
-            console.log(weatherData.daily[i]);
           }
         });
     });
@@ -110,7 +106,6 @@ function searchHistory(value) {
 }
 historySection.addEventListener("click", function (event) {
   if (event.target.nodeName === "BUTTON") {
-    console.log(event.target.textContent);
     getWeatherData(event.target.textContent);
   }
 });
